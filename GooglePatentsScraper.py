@@ -1,8 +1,8 @@
 import requests
 
-
 def scraper(keywords, N=20):
-    pages = (N+9)//10
+    pages=N//10
+    if N%10!=0: pages+=1
     output = []
     keywords = keywords.replace(" ", "%2B").replace("/", "%252f")
     # print(keywords)
